@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<h1>Test Mandori</h1>
+<form id="f">
+  <input name="nombre" placeholder="Nombre" value="Prueba Local"><br>
+  <input name="email" placeholder="Email" value="test@example.com"><br>
+  <input name="telefono" placeholder="Teléfono" value="999999999"><br>
+  <input name="destino_interes" placeholder="Destino" value="Cusco"><br>
+  <textarea name="mensaje">Hola, quiero viajar.</textarea><br>
+  <button>Enviar</button>
+</form>
+<pre id="out"></pre>
+<script>
+const f=document.getElementById('f'), out=document.getElementById('out');
+f.addEventListener('submit', async e=>{
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(f).entries());
+  data.pagina_destino = location.href;
+  data.url_referencia = document.referrer;
+  data.utm_source='local-test';
+  const r = await fetch('/mandori/api/submit_solicitud.php', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(data)
+  });
+  out.textContent = await r.text();
+});
+</script>
