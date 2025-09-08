@@ -1,15 +1,32 @@
 import React from 'react';
 import { Compass, Award, Heart, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/use-toast';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
+
+// Icono de TikTok personalizado (estilo Lucide)
+const TikTok = ({ className }) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+  </svg>
+);
 
 const Footer = () => {
   const handleSocialClick = (platform) => {
-    toast({
-      title: "🚧 Esta función aún no está implementada",
-      description: "¡Pero no te preocupes! Puedes solicitarla en tu próximo mensaje 🚀",
-    });
+    const socialLinks = {
+      Facebook: 'https://www.facebook.com/mandori.turismo',
+      Instagram: 'https://www.instagram.com/mandoriturismoyviajes_oficial',
+      TikTok: 'https://www.tiktok.com/@mandori.turismo.v'
+    };
+    
+    window.open(socialLinks[platform], '_blank');
   };
 
   return (
@@ -47,10 +64,10 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => handleSocialClick('Twitter')}
-                className="text-gray-300 hover:text-white hover:bg-blue-400"
+                onClick={() => handleSocialClick('TikTok')}
+                className="text-gray-300 hover:text-white hover:bg-black"
               >
-                <Twitter className="w-5 h-5" />
+                <TikTok className="w-5 h-5" />
               </Button>
             </div>
           </div>
