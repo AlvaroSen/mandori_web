@@ -40,7 +40,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">Teléfono</p>
-                  <p className="text-gray-600">+51 993 834 042</p>
+                  <p className="text-gray-600">(+51) 959 509 457</p>
                 </div>
               </div>
 
@@ -50,7 +50,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">Email</p>
-                  <p className="text-gray-600">alvaro.ayala@mandori.com</p>
+                  <p className="text-gray-600">reservas@mandoriturismoyviajes.com</p>
+                  <p className="text-gray-600">gerencia@mandoriturismoyviajes.com</p>
                 </div>
               </div>
 

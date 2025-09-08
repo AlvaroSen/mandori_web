@@ -21,24 +21,24 @@ const TikTok = ({ className }) => (
 const Footer = () => {
   const handleSocialClick = (platform) => {
     const socialLinks = {
-      Facebook: 'https://www.facebook.com/mandori.turismo',
+      Facebook: 'https://www.facebook.com/profile.php?id=61579619273966',
       Instagram: 'https://www.instagram.com/mandoriturismoyviajes_oficial',
-      TikTok: 'https://www.tiktok.com/@mandori.turismo.v'
+      TikTok: 'https://www.tiktok.com/@mandori.turismo'
     };
     
     window.open(socialLinks[platform], '_blank');
   };
 
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="footer-custom text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src="img/mandori_logo.png"
+                src="img/mandori_logo_letras_blancas.png"
                 alt="Logo de Mandori - Turismo & Viajes"
-                className="h-10 w-auto"
+                className="h- w-auto"
               />
             </div>
             <p className="text-gray-300 mb-4">

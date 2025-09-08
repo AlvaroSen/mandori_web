@@ -10,7 +10,7 @@ body {
 }
 
 .hero-gradient {
-  background: linear-gradient(-135deg,  #14EFA6 25%, #0000FF 100%);
+  background: linear-gradient(-135deg,  #14EFA6 1%, #0000FF 50%);
 }
 
 .service-card {
@@ -38,3 +38,26 @@ body {
 .pulse-slow {
   animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+.footer-custom {
+  background-color:  #0000FF;
+}
+
+.text-inicio {
+  color: #14EFA6;
+}
+
+.button-inicio {
+  background-color: #14EFA6;
+  color: black;
+}
+
+.floating-globe {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background-color: #14EFA6;
+  border-radius: 50%;
+  padding: 1rem;
+}
+

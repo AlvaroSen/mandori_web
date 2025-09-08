@@ -17,8 +17,8 @@ const HeroSection = () => {
           >
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               Descubre el
-              <span className="text-yellow-300"> Mundo</span> con
-              <span className="text-yellow-300"> Mandori</span>
+              <span className="text-inicio"> Mundo</span> con
+              <span className="text-inicio"> Mandori</span>
             </h1>
             <p className="text-xl mb-8 text-gray-100">
               Tu empresa de confianza para vivir experiencias únicas e inolvidables.
@@ -27,7 +27,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 text-lg"
+                className="button-inicio"
                 onClick={() => document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })}
               >
                 Explorar Servicios
@@ -35,7 +35,7 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 text-lg"
+                className="button-inicio"
                 onClick={() => document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })}
               >
                 Contactar Ahora
@@ -53,10 +53,7 @@ const HeroSection = () => {
               <img
                 alt="Viajeros explorando destino exótico"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
-                src="https://images.unsplash.com/photo-1693554925388-e464daba8fe6" />
-            </div>
-            <div className="absolute -top-4 -right-4 bg-yellow-400 rounded-full p-4 pulse-slow">
-              <Globe className="w-8 h-8 text-gray-800" />
+                src="/img/imagen_inicio.jpg" />
             </div>
           </motion.div>
         </div>
